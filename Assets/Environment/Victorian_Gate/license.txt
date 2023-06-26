@@ -1,0 +1,11 @@
+Model Information:
+* title:	Victorian Gate
+* source:	https://sketchfab.com/3d-models/victorian-gate-fca75962efc542758a550094c0230c10
+* author:	syedraza (https://sketchfab.com/syedraza)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Victorian Gate" (https://sketchfab.com/3d-models/victorian-gate-fca75962efc542758a550094c0230c10) by syedraza (https://sketchfab.com/syedraza) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

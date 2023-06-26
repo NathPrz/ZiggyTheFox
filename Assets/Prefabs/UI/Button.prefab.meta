@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/MinimapVortexIconMaterial.mat.meta
+guid: f0367b6848a451c4f832d4f9675dfa21
+NativeFormatImporter:
+========
+guid: a2862c72e63bf6a4cb28c95827b4f630
+PrefabImporter:
+>>>>>>>> aecc3a9 (Add animation on button over):Assets/Prefabs/UI/Button.prefab.meta
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,182 @@
+ZIGGY LE RENARD
+
+
+========== INSTRUCTIONS DU JEU ==========
+
+	- Contrôles :
+
+Pour déplacer le joueur :
+
+	- Avancer : flèche du haut ou Z (clavier AZERTY) ou W (clavier QWERTY)
+	- Reculer : flèche du bas ou S
+	- Droite : flèche de droite ou D
+	- Gauche : flèche de gauche ou Q (clavier AZERTY) ou A (clavier QWERTY)
+
+La barre d'espace permet au joueur de sauter.
+
+La souris permet de déplacer le champ de vision du joueur.
+
+La touche Shift permet au joueur de se déplacer plus rapidement.
+	
+
+	- Conditions de victoire :
+
+Pour remporter la partie, le joueur doit atteindre la ligne d'arrivée tout en évitant ou attaquant les ennemis qui se dressent devant lui.
+
+
+	- Conditions de défaite :
+
+Le joueur perd la partie s'il perd ses 3 vies, soit en tombant dans l'eau, soit en étant attaqué par les ennemis.
+La partie est aussi perdue si le temps imparti est écoulé avant que le joueur n'atteigne la ligne d'arrivée.
+
+
+	- Capacités du joueur :
+
+Le joueur a la possibilité d'attaquer ses ennemis grâce à la touche E du clavier. Pour les ennemis "spider" il doit sauter dessus pour les tuer.
+
+Le joueur peut récupérer une vie en touchant l'objet ressemblant à un renard sur un nuage.
+De même, il a la possibilité de restaurer toutes ses vies en ramassant 40 cerises. Dans le cas où il aurait déjà sa barre de vie complète, le joueur gagne alors une vie supplémentaire.
+
+En tombant dans l'eau le joueur perd la moitié de ses cerises.
+
+
+========== REMARQUES ==========
+
+	- Limitations :
+Pour attaquer un ennemi "spider", le joueur ne peut que sauter dessus. Son attaque "Tornado" ne fonctionne pas sur ce type d'ennemi.
+
+
+	- Bugs connus :
+Il arrive que le joueur passe à travers les boites et des fois elles ne se détruisent pas quand le joueur saute dessus ou s'il essaye de les détruire avec son attaque "Tornado".
+
+
+	- Voies d'amélioration :
+Attaque et dégâts des ennemis.
+Destruction des boîtes.
+
+
+========== DÉVELOPPEMENT DU JEU ==========
+
+Les principaux développeurs du jeu sont Élodie, Nathalia et Steeve.
+
+Steeve a également créé les différents terrains.
+
+Nathalia s'est aussi occupée d'importer les différents modèles 3D, d'implémenter les scripts d'IA des ennemis et de développer les contrôles du joueur.
+
+Élodie s'est occupée des différents menus ainsi que des musiques et effets sonores.
+
+
+========== ASSETS ==========
+
+
+	----- Modèles 3D -----
+
+Les modèles Bear, Cherry, Fox et Wolf proviennent de l'asset store de Unity.
+
+Le modèle du policier provient du package poligonAdventure de syntystudios
+
+Tous les modèles utilisés sont gratuits.
+
+
+
+	----- Sprites -----
+
+	- Cherry2DSpriteSheet :
+		- URL : Photoshop
+		- Gratuit
+		- Licence d'utilisation : Aucune
+
+	- Fox2DSpritesheet :
+		- URL : https://elthen.itch.io/2d-pixel-art-fox-sprites
+		- Gratuit 
+		- Licence d'utilisation : Aucune
+
+
+	----- Images -----
+
+	- Timer :
+		- URL : https://www.freepik.com/free-psd/3d-transparent-hourglass_13677898.htm#query=timer&position=25&from_view=search&track=sph
+		- Gratuit
+		- Licence d'utilisation : Free license
+
+
+	----- Sons -----
+
+	- GameOverAudio :
+		- URL : https://pixabay.com/sound-effects/negative-beeps-6008/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+	- GetFruitAudio :
+		- URL : https://mixkit.co/free-sound-effects/game
+		- Gratuit
+		- Licence d'utilisation :  Mixkit Sound Effects Free License
+
+	- LevelCompletedAudio :
+		- URL : https://pixabay.com/sound-effects/level-passed-143039/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+	- Pickup_03 :
+		- URL : https://opengameart.org
+		- Gratuit
+		- Licence d'utilisation : Aucune
+
+	- PlayerHitAudio :
+		- URL : https://pixabay.com/sound-effects/punch-140236/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+	- PlayerJumpAudio :
+		- URL : https://pixabay.com/sound-effects/cartoon-jump-6462/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+	- ScrapBox :
+		- URL : https://opengameart.org
+		- Gratuit 
+		- Licence d'utilisation : Aucune
+
+
+	- WaterSplash :
+		- URL : https://opengameart.org
+		- Gratuit 
+		- Licence d'utilisation : Aucune
+
+	- PlayerStep[1-5}:
+		- URL : https://pixabay.com/sound-effects/concrete-footsteps-1-6265/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+
+	----- Musiques -----
+
+	- BonusLevelBackgroundMusic :
+		- URL : https://www.chosic.com/download-audio/27248/
+		- Gratuit
+		- Credits :
+			Fluffing a Duck Kevin MacLeod (incompetech.com)
+			Licensed under Creative Commons: By Attribution 3.0 License
+			http://creativecommons.org/licenses/by/3.0/
+			Music promoted by https://www.chosic.com/free-music/all/
+
+	- Level1BackgroundMusic :
+		- URL : https://pixabay.com/music/happy-childrens-tunes-be-funny-153884/
+		- Gratuit
+		- Licence d'utilisation : "Use content for free without having to attribute the author"
+
+
+	- Level2BackgroundMusic :
+		- URL : https://www.chosic.com/download-audio/45420/
+		- Gratuit
+		- Credits :
+			Wallpaper by Kevin MacLeod | https://incompetech.com/
+			Music promoted by https://www.chosic.com/free-music/all/
+			Creative Commons CC BY 3.0
+			https://creativecommons.org/licenses/by/3.0/
+
+
+	- MainMenuBackgroundMusic : 
+		- URL : https://www.chosic.com/download-audio/25141/
+		- Gratuit
+		- Licence d'utilisation : None
