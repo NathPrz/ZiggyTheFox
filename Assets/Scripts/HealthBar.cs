@@ -100,6 +100,7 @@ public class HealthBar : MonoBehaviour
 
             playerController.enabled = true;
             canBeDamage = true;
+            Debug.LogError("Player has been hit -1!" + manager.currentHealth);
         }
         else
         {

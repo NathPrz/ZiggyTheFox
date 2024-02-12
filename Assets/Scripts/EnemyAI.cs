@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float lookRadius = 5f;
     [Tooltip("How much dammage this enemy can cause")]
     public int dammage = 1;
-    //public float rangeOfAttack = 1.3f;
+    public float attackRange = 1.3f;
     [Tooltip("Time required to pass before being able to attack again. Set to 0f to instantly attack again")]
     public float attackTimeout = 0.50f;
 
@@ -28,28 +28,47 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         AssignAnimationIDs();
-        attackTimeoutDelta = attackTimeout;        
+        attackTimeoutDelta = attackTimeout;
     }
 
     void Update()
     {
-
-        float distance = Vector3.Distance(playerTransform.position, transform.position);
-
-        //Chase the player
-        if (distance <= lookRadius)
+        if (playerTransform != null)
         {
-            agent.SetDestination(playerTransform.position);
-            transform.LookAt(playerTransform.position);
-        }
+            float distance = Vector3.Distance(playerTransform.position, transform.position);
 
-        //Attack timeout timer
-        if (attackTimeoutDelta >= 0.0f)
+            //Chase the player
+            if (distance <= lookRadius)
+            {
+                transform.LookAt(playerTransform.position);
+                if (distance <= attackRange)
+                {
+                    // Stop moving when within attack range
+                    agent.isStopped = true;
+
+                    if (attackTimeoutDelta <= 0.0f)
+                    // Trigger attack animation or apply damage to the player
+                        Attack();
+                }
+                else
+                {
+                    // Resume chasing the player
+                    agent.isStopped = false;
+                    agent.SetDestination(playerTransform.position);
+                }                
+            }
+
+            //Attack timeout timer
+            if (attackTimeoutDelta >= 0.0f)
+            {
+                attackTimeoutDelta -= Time.deltaTime;
+            }
+            animator.SetFloat(_animIDSpeed, agent.velocity.magnitude);
+        }
+        else
         {
-            attackTimeoutDelta -= Time.deltaTime;
+            Debug.LogError("Player object not found!");
         }
-
-        animator.SetFloat(_animIDSpeed, agent.velocity.magnitude);
     }
 
     private void AssignAnimationIDs()
@@ -67,13 +86,13 @@ public class EnemyAI : MonoBehaviour
         attackTimeoutDelta = attackTimeout;
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player") && attackTimeoutDelta <= 0.0f)
         {            
-            Attack();
+            //Attack();
         }
-    }
+    }*/
     public void TakeDamage()
     {
         animator.SetTrigger(_animIDDie);
