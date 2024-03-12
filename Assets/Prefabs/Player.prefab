@@ -294,7 +294,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.26
+  m_Radius: 0.35
   m_Center: {x: 0, y: -0.09, z: 0}
 --- !u!114 &477706288
 MonoBehaviour:
@@ -470,6 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 6
+  pushForce: 1
   SprintSpeed: 15
   RotationSmoothTime: 0.12
   SpeedChangeRate: 2

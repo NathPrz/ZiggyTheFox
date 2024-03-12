@@ -20828,7 +20828,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-32062
+  m_Name: pb_Mesh-143808
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24968,6 +24968,20 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 498493309115930405}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1397294077
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591630037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.44
+  m_Height: 0.97
+  m_Direction: 1
+  m_Center: {x: 0.58, y: 1.18, z: 0.28}
 --- !u!1 &1397621637
 GameObject:
   m_ObjectHideFlags: 0
@@ -34683,7 +34697,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107038939}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.19
   m_Height: 2
@@ -35090,6 +35104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4177063175225478254, guid: 2d4cc07e22d85374b8d15cd15f4e18e1,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177063175225478254, guid: 2d4cc07e22d85374b8d15cd15f4e18e1,
+        type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -35327,8 +35346,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1950630273, guid: 8c2caadb88551465a930d414b36ea3f7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_Radius
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 15860070931124622, guid: 8c2caadb88551465a930d414b36ea3f7,
         type: 3}
@@ -35367,6 +35386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498493309805732210, guid: 8c2caadb88551465a930d414b36ea3f7,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498493309805732210, guid: 8c2caadb88551465a930d414b36ea3f7,
+        type: 3}
       propertyPath: m_Center.y
       value: 0.85
       objectReference: {fileID: 0}
@@ -35374,6 +35398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoveSpeed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 498493309805732211, guid: 8c2caadb88551465a930d414b36ea3f7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 498493309805732211, guid: 8c2caadb88551465a930d414b36ea3f7,
         type: 3}

@@ -45,10 +45,11 @@ public class EnemyAI : MonoBehaviour
                 {
                     // Stop moving when within attack range
                     agent.isStopped = true;
+                    animator.SetTrigger(_animIDAttack);
 
-                    if (attackTimeoutDelta <= 0.0f)
+                    // if (attackTimeoutDelta <= 0.0f)
                     // Trigger attack animation or apply damage to the player
-                        Attack();
+                    //   Attack();
                 }
                 else
                 {
@@ -80,19 +81,19 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
-        animator.SetTrigger(_animIDAttack);
+        //animator.SetTrigger(_animIDAttack);
         EventManager.Instance.Raise(new PlayerGotHitEvent() { });
         // reset the attack timeout timer
         attackTimeoutDelta = attackTimeout;
     }
 
-   /* private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") && attackTimeoutDelta <= 0.0f)
+        if (other.CompareTag("Player") && attackTimeoutDelta <= 0.0f)
         {            
-            //Attack();
+            Attack();
         }
-    }*/
+    }
     public void TakeDamage()
     {
         animator.SetTrigger(_animIDDie);
@@ -102,6 +103,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator destroyAgent()
     {
         agent.GetComponent<Collider>().enabled = false;
+        attackRange = 4.3f; // Avoid attack when animating dead
         AnimatorStateInfo animatorInfo = animator.GetCurrentAnimatorStateInfo(0);
         float wait = animatorInfo.length;
         yield return new WaitForSeconds(wait);
